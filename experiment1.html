@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+</head>
+
+<body>
+
+    <h1>Online Shopping Product</h1>
+
+    <p id="details"></p>
+
+    <script>
+
+        let product = {
+
+            productId: 678,
+            productName: "iphone",
+            Price: 100000,
+            quantity: 2,
+            totalPrice: function() {
+                console.log(this.Price*this.quantity) 
+               
+            },
+            updateproductquantity: function(qty) {
+                this.quantity= qty;
+                console.log(this.quantity);
+            },
+            displayproductdetails: function() {
+
+                console.log(this.productId);
+                 console.log(this.productName);
+                  console.log(this.price);
+                  console.log(this.quantity)
+            }
+        };
+         product.totalPrice();
+       product.updateproductquantity(22);
+       product.displayproductdetails();
+             
+    </script>
+
+</body>
+</html>
