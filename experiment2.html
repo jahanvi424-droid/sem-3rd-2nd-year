@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Details</title>
+</head>
+
+<body>
+
+    <h1>Bank Account Details</h1>
+
+    <p id="details"></p>
+
+    <script>
+
+        let details = {
+
+            accountholdername: "Jahanvi",
+            accountno: 3785,
+            accountbalance: 50000,
+            balance: function() {
+                return this.accountbalance;
+            },
+            depositaccount: function(amount) {
+                this.accountbalance += amount;
+                console.log(this.accountbalance);
+            },
+            displaybalance: function() {
+
+                console.log(this.accountbalance);
+            }
+        };
+      //  details.displaybalance();
+       // details.updatebalance(5000);
+       console.log(details.balance());
+       console.log( details.depositaccount(22));
+       console.log( details.displaybalance());
+    </script>
+
+</body>
+
+</html>
