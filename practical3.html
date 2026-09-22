@@ -1,0 +1,67 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee ji</title>
+</head>
+
+<body>
+
+<script>
+
+class Employee {
+
+    constructor(id, name, basicSalary) {
+        this.id = id;
+        this.name = name;
+        this.basicSalary = basicSalary;
+    }
+
+    calculateSalary() {
+        return this.basicSalary;
+    }
+
+    display() {
+        console.log(this.id);
+        console.log(this.name);
+        console.log(this.calculateSalary());
+    }
+}
+
+
+class Manager extends Employee {
+
+    constructor(id, name, basicSalary, incentive) {
+        super(id, name, basicSalary);
+        this.incentive = incentive;
+    }
+
+    calculateSalary() {
+        return this.basicSalary ;
+        return this.incentive;
+    }
+}
+
+
+let e1 = new Employee(101, "Jahanvi", 30000);
+
+let m1 = new Manager(102, "Ruku", 50000, 10000);
+
+console.log("Employee Details");
+
+e1.display();
+
+
+
+
+console.log("Manager Details");
+
+console.log(m1.id);
+console.log(m1.name);
+console.log(m1.calculateSalary());
+
+</script>
+</body>
+</html>
